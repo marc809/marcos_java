@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chacomer Motos — Media y alta cilindrada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="marca" href="#inicio">
+      <span class="marca-marca">CHACOMER</span>
+      <span class="marca-linea">MOTOS</span>
+    </a>
+    <nav class="nav">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#categorias">Cilindradas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-whatsapp" id="btn-whatsapp-header" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-copy">
+      <p class="eyebrow">Concesionaria · Paraguay</p>
+      <h1>Motos de media y alta cilindrada, listas para llevar.</h1>
+      <p class="lead">
+        En Chacomer reunimos las motos más pedidas: naked, sport y adventure.
+        Elegí el modelo, consultá el precio y escribínos por WhatsApp para reservar.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primario" href="#catalogo">Ver catálogo</a>
+        <a class="btn btn-ghost" href="#contacto">Hablar con ventas</a>
+      </div>
+    </div>
+    <div class="hero-panel" aria-hidden="true">
+      <p>Desde 250 cc</p>
+      <strong>hasta 1100 cc</strong>
+      <span>Precio en guaraníes · Stock de showroom</span>
+    </div>
+  </section>
+
+  <section class="categorias" id="categorias">
+    <article class="cat-card">
+      <h2>Media cilindrada</h2>
+      <p>250 a 499 cc. Ciudad, trabajo y los primeros kilómetros en ruta. Menor peso, fácil de manejar.</p>
+      <button type="button" data-filtro="media">Ver medias</button>
+    </article>
+    <article class="cat-card cat-card-alta">
+      <h2>Alta cilindrada</h2>
+      <p>500 cc en adelante. Torque, presencia y viajes largos. El corazón de nuestra vitrina.</p>
+      <button type="button" data-filtro="alta">Ver altas</button>
+    </article>
+  </section>
+
+  <section class="catalogo" id="catalogo">
+    <div class="catalogo-cabecera">
+      <div>
+        <p class="eyebrow">Disponibles ahora</p>
+        <h2>Catálogo</h2>
+      </div>
+      <div class="filtros" role="group" aria-label="Filtrar por cilindrada">
+        <button type="button" class="filtro activo" data-filtro="todas">Todas</button>
+        <button type="button" class="filtro" data-filtro="media">Media</button>
+        <button type="button" class="filtro" data-filtro="alta">Alta</button>
+      </div>
+    </div>
+    <p id="estado-catalogo" class="estado">Cargando motos…</p>
+    <div id="grilla-motos" class="grilla"></div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <div>
+      <p class="eyebrow">Compra simple</p>
+      <h2>¿Te gustó una moto? Te atendemos por WhatsApp.</h2>
+      <p>
+        No hay carrito ni pago en la web. Tocá <strong>Quiero esta moto</strong> y se abre un chat
+        con el modelo, la cilindrada y el precio ya escritos. Coordinamos visita al local, financiación y entrega.
+      </p>
+    </div>
+    <a class="btn btn-whatsapp btn-grande" id="btn-whatsapp-contacto" href="#" target="_blank" rel="noopener">Escribir a ventas</a>
+  </section>
+
+  <footer class="pie">
+    <p>Chacomer Motos · Catálogo académico LP3 · Universidad Autónoma San Sebastián</p>
+    <p>Precios de referencia en Gs. Sujetos a stock y confirmación en local.</p>
+  </footer>
+
+  <dialog id="modal-moto" class="modal">
+    <article>
+      <img id="modal-img" alt="">
+      <div class="modal-body">
+        <p class="eyebrow" id="modal-cat"></p>
+        <h3 id="modal-titulo"></h3>
+        <p id="modal-desc"></p>
+        <ul>
+          <li>Cilindrada: <span id="modal-cc"></span></li>
+          <li>Color: <span id="modal-color"></span></li>
+          <li>Precio: <span id="modal-precio"></span></li>
+        </ul>
+        <div class="modal-acciones">
+          <a class="btn btn-whatsapp" id="modal-wa" target="_blank" rel="noopener">Quiero esta moto</a>
+          <button type="button" class="btn btn-ghost" id="modal-cerrar">Cerrar</button>
+        </div>
+      </div>
+    </article>
+  </dialog>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
